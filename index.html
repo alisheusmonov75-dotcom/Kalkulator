@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <div class="calculator max-w-[400px] max-h[400px] p-3">
+    <input type="text" class="w-full h-20  my-2 outline-none border-2 text-right text-4xl rounded-xl">
+    <div class="calc grid grid-cols-4 gap-1">
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('7')">7</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('8')">8</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('9')">9</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('*')">*</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('4')">4</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('5')">5</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('6')">6</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('/')">/</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('1')">1</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('2')">2</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('3')">3</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('-')">-</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('0')">0</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('.')">.</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('=')">=</button>
+        <button class="btn w-auto h-16 text-white font-bold bg-black required-1xl active:scale-90 translate-all" onclick="kirit('+')">+</button>
+    </div>
+  </div>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+  <script>
+    let input = document.querySelector("input")
+
+    function kirit(x){
+        if (x == "="){
+            let z= eval(input.value)
+            input.value =z
+        }
+        else[
+            input.value += x
+        ]
+    }
+  </script>
+</body>
+</html>
